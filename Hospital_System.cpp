@@ -61,18 +61,21 @@ void addNewPatient(string names[5][20], int statuses[5][20])
 void printAllPatients(string names[5][20], int statuses[5][20])
 {
     for (int i = 0; i < 20; i++)
+    {
+        if (names[0][i] != "")
+            cout << "In specialization: " << i + 1 << " The patients are:\n";
         for (int j = 0; j < 5; j++)
         {
             if (names[j][i] != "")
             {
-                cout << "In specialization: " << i + 1 << " The patients are:\n"
-                     << names[j][i] << " ";
+                cout << names[j][i] << " ";
                 if (statuses[j][i] == 1)
                     cout << "Urgent" << endl;
                 else
                     cout << "Regular" << endl;
             }
         }
+    }
 }
 
 void getNextPatient(string names[5][20], int statuses[5][20])
