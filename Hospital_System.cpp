@@ -126,12 +126,12 @@ void getNextPatient(string names[5][20], short statuses[5][20])
 
 int main()
 {
-
     // continuity flag
     bool usingg = true;
 
     // The array holding all the patients' names
     string names[5][20] = {""};
+
     // The array holding all the statuses of the corresponding patients
     short statuses[5][20] = {0};
 
